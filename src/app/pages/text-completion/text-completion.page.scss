@@ -1,0 +1,22 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    height: 100%;
+}
+
+
+.entrada{
+    height: 20%;
+    position: relative;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.chatbot{
+    height: 80%;
+}

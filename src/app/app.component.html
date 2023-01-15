@@ -2,9 +2,9 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
-        <ion-list id="inbox-list">
+        <ion-list>
           <ion-list-header>Mini Jarvis</ion-list-header>
-
+          <br /><br />
           <ion-menu-toggle
             auto-hide="false"
             *ngFor="let p of appPages; let i = index"
@@ -16,11 +16,7 @@
               detail="false"
               routerLinkActive="selected"
             >
-              <ion-icon
-                slot="start"
-                [name]="p.icon"
-                color="dark"
-              ></ion-icon>
+              <ion-icon slot="start" [name]="p.icon" color="dark"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>

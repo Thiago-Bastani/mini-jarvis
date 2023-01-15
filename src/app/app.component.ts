@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Text completion', url: '/pages/text-completion/text-completion.page', icon: 'planet' },
+    { title: 'Text completion', url: 'text-completion', icon: 'planet' },
+    { title: 'settings', url: 'configuration', icon: 'settings' },
   ];
   constructor() {}
 }

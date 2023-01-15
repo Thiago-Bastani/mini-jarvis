@@ -16,12 +16,24 @@
 
   <div id="container">
     <br /><br /><br /><br />
-    <ion-item color="light">
-      <ion-textarea placeholder="Enter a description" [(ngModel)]="prompt"></ion-textarea>
-    </ion-item>
-    <ion-button (click)="ask()" expand="full"> Perguntar</ion-button>
-    <div>
-      {{loading}}
+    <ion-card class="chatbot">
+      <ion-card-header>
+        <ion-card-title>Chatbot</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content> {{loading}} </ion-card-content>
+    </ion-card>
+    <br /><br /><br /><br />
+    <div class="entrada">
+      <ion-item color="light" class="text-entrada">
+        <ion-textarea
+          placeholder="Enter a description"
+          [(ngModel)]="prompt"
+        ></ion-textarea>
+      </ion-item>
+      <ion-button (click)="ask()" fill="outline" expand="block" color="dark">
+        Perguntar</ion-button
+      >
     </div>
   </div>
 </ion-content>

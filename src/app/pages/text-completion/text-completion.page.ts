@@ -17,15 +17,17 @@ export class TextCompletionPage implements OnInit {
   async ask() {
     this.loading = 'Loading...';
     this.completionService
-      .getCompletion(this.prompt + ' ' + this.context)
+      .getCompletion( this.context + '.' + this.prompt)
       .subscribe({
         next: (data: any) => {
           this.context = data.choices[0].text;
         },
         error: (error) => {
           console.error(error);
+          this.loading = 'failed... check the console.';
         },
         complete: () => {
+          console.log(this.context);
           this.loading = this.context;
         },
       });

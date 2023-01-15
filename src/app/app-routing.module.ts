@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'text-completion',
     loadChildren: () => import('./pages/text-completion/text-completion.module').then( m => m.TextCompletionPageModule)
+  },
+  {
+    path: 'configuration',
+    loadChildren: () => import('./pages/configuration/configuration.module').then( m => m.ConfigurationPageModule)
   }
 ];
 

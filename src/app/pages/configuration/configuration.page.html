@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Settings</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <br /><br /><br /><br />
+    <ion-item color="light">
+      <ion-textarea
+        placeholder="Enter your API_TOKEN"
+        [(ngModel)]="apikey"
+      ></ion-textarea>
+    </ion-item>
+    <ion-button (click)="setKey()" fill="outline" expand="block" color="dark"
+      >Set Key</ion-button
+    ><br /><br />
+    <ion-label>Max_Tokens: {{ max_tokens }}</ion-label>
+    <ion-range
+      [min]="10"
+      [max]="800"
+      [(ngModel)]="max_tokens"
+      (ionChange)="onIonChangeMaxTokens($event)"
+      color="dark"
+    ></ion-range>
+    <ion-button
+      (click)="setMaxTokens()"
+      fill="outline"
+      expand="block"
+      color="dark"
+      >Set MAX_TOKENS</ion-button
+    ><br /><br />
+    <ion-label>Temperature: {{ temperature }}</ion-label>
+    <ion-range
+      [min]="0"
+      [max]="10"
+      [(ngModel)]="temperature"
+      (ionChange)="onIonChangeTemperature($event)"
+      color="dark"
+    ></ion-range>
+    <ion-button
+      (click)="setTemperature()"
+      fill="outline"
+      expand="block"
+      color="dark"
+      >Set Temperature</ion-button
+    >
+  </div>
+</ion-content>
