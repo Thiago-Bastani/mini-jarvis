@@ -1,3 +1,3 @@
 export class Apikey {
-    key: string = "your_api_key"; // DO NOT SHARE
+    key: string = "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"; // DO NOT SHARE
 }

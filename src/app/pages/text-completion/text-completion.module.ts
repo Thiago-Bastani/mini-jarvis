@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FolderPageRoutingModule } from './folder-routing.module';
+import { TextCompletionPageRoutingModule } from './text-completion-routing.module';
 
-import { FolderPage } from './folder.page';
+import { TextCompletionPage } from './text-completion.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FolderPageRoutingModule
+    TextCompletionPageRoutingModule
   ],
-  declarations: [FolderPage]
+  declarations: [TextCompletionPage]
 })
-export class FolderPageModule {}
+export class TextCompletionPageModule {}

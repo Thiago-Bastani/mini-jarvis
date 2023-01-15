@@ -1,13 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ChatgptDallEService } from './chatgpt-dall-e.service';
+import { CompletionService } from './chatgpt-completion.service';
 
-describe('ChatgptDallEService', () => {
-  let service: ChatgptDallEService;
+describe('CompletionService', () => {
+  let service: CompletionService
+;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ChatgptDallEService);
+    service = TestBed.inject(CompletionService
+    );
   });
 
   it('should be created', () => {

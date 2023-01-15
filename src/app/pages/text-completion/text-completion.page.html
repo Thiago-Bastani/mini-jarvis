@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Text completion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Text completion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <br /><br /><br /><br />
+    <ion-item color="light">
+      <ion-textarea placeholder="Enter a description" [(ngModel)]="prompt"></ion-textarea>
+    </ion-item>
+    <ion-button (click)="ask()" expand="full"> Perguntar</ion-button>
+    <div>
+      {{loading}}
+    </div>
+  </div>
+</ion-content>
